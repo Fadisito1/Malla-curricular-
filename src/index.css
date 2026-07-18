@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rosa-nube: #FFF0F5;
+  --rosa-palo: #F2D1D9;
+  --rosa-coral: #F294A5;
+  --frambuesa: #D93664;
+  --cereza-oscuro: #731731;
+}
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply m-0 font-sans antialiased;
+  background-color: var(--rosa-nube);
+  min-height: 100vh;
+}
+
+.course-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.course-card:hover {
+  @apply shadow-lg transform -translate-y-1;
+}
+
+.course-card.completed {
+  @apply ring-2;
+  background-color: var(--frambuesa);
+  border-color: var(--cereza-oscuro);
+}
+
+.course-card.unlocked {
+  @apply animate-pulse;
+}
+
+.semester-column {
+  @apply min-h-screen;
+}
